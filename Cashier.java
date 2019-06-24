@@ -1,20 +1,28 @@
+package TimeSimulation;
 
 public class Cashier {
-	private Customer aCustomer;
-	// Queue type Customer goes here
+	
+	LinkedQueue<Customer> customers = new LinkedQueue<>();
 	
 	public void addCustomer(Customer customer) {
-		
+		customers.enqueue(customer);
 	} //end addCustomer
 	
 	public void removeCustomer() {
-		
+		customers.dequeue();
 	} //end removeCustomer
 	
-	public void serviceCustomer(Customer customer) {
-		/* Gets the the service required by customer and
-		dequeues customer when finishes
-		*/
+	public void serviceCostumer() {
+		
+		Customer aCustomer = customers.peek();
+		aCustomer.substractServiceUnit();
+		
 	}//end servceCustomer
+	
+	public int queueLength() {
+		
+		return customers.size();
+		
+	}//end queueLength
 
 }
