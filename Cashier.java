@@ -1,4 +1,3 @@
-package TimeSimulation;
 
 public class Cashier {
 	private Customer aCustomer;
@@ -12,7 +11,7 @@ public class Cashier {
 		
 	} //end removeCustomer
 	
-	public void serviceCostumer(Customer customer) {
+	public void serviceCustomer(Customer customer) {
 		/* Gets the the service required by customer and
 		dequeues customer when finishes
 		*/
