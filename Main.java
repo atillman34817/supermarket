@@ -15,6 +15,7 @@ public class Main {
    MarketModel model = new MarketModel();
    model.runSimulation(probOfNewArrival,runningTime,averageTime);
    
+   System.out.println(model);
 		//probOfNewArrival, runningTime, averageTime
 	}
 
