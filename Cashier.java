@@ -1,7 +1,7 @@
 package TimeSimulation;
 
 public class Cashier {
-	private Costumer aCostumer;
+	private Customer aCustomer;
 	// Queue type Customer goes here
 	
 	public void addCustomer(Customer customer) {
