@@ -1,20 +1,15 @@
-public class MarketModel(probOfNewArrival, runningTime, averageTime)
-{
-   this.probOfNewArrival = probOfNewArrival;
-   this.runningTime = runningTime;
-   this.averageTime = averageTime;
-   
-   Cashier();
-     
+import java.util.Random;
+public class MarketModel{
+   public void runSimulation(double probOfNewArrival,double runningTime, double averageTime){
+      Cashier cashier = new Cashier();
+      for (int currentTime = 0; currentTime < runningTime; currentTime++){
+         Random rand = new Random();
+         double rand_dub1 = rand.nextDouble(); 
+         if (rand_dub1 >= probOfNewArrival){
+            Customer c = Customer.generateCustomer(currentTime, averageTime);
+            cashier.addCustomer(c);
+         }
+      } // end SimulationLoop  
+   }// end runSimulation        
 } // end MarketModel
 
-public class runSimulation()
-{
-   for (int currentTime = 0; i < runningTime; i++)
-   {
-      customer = generateCustomer(this.probOfNewArrival, currentTime, this.averageTime)
-      if customer != None
-         Cashier.addCustomer(customer)
-      Cashier.serviceCustomers(currentTime)
-   } // end SimulationLoop
-}// end runSimulation
