@@ -12,7 +12,7 @@ public class Cashier {
 		
 	} //end removeCustomer
 	
-	public void serviceCostumer(Costumer costumer) {
+	public void serviceCostumer(Customer customer) {
 		/* Gets the the service required by customer and
 		dequeues customer when finishes
 		*/
