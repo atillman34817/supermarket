@@ -18,11 +18,10 @@ public class Cashier {
 	public void serviceCustomer() {
 		Customer aCustomer = customers.peek();
 		
-		while(!aCustomer.isComplete) {
-			aCustomer.takeService();
-		}
+		aCustomer.takeService();
 		
-		customers.dequeue();
+		if(aCustomer.isComplete) 
+			customers.dequeue();
 		
 	}// end serviceCustomer
 	
