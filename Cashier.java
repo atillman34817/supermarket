@@ -2,6 +2,7 @@
 public class Cashier {
 	
 	private LinkedQueue<Customer> customers;
+	private int servicedCustomer;
 	
 	public Cashier() {
 		customers = new LinkedQueue<Customer>();
@@ -20,10 +21,17 @@ public class Cashier {
 		
 		aCustomer.takeService();
 		
-		if(aCustomer.isComplete) 
+		if(aCustomer.isComplete){
 			customers.dequeue();
-		
+			this.servicedCustomer++;
+		}
 	}// end serviceCustomer
+
+	public getServicedCustomer(){
+
+	return this.servicedCustomer;
+
+	}
 	
 	
 	public int queueLength() {
