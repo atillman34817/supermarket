@@ -1,4 +1,3 @@
-
 public class Cashier {
 	
 	private LinkedQueue<Customer> customers;
@@ -21,13 +20,13 @@ public class Cashier {
 		
 		aCustomer.takeService();
 		
-		if(aCustomer.isComplete){
+		if(aCustomer.isComplete()){
 			customers.dequeue();
 			this.servicedCustomer++;
 		}
 	}// end serviceCustomer
 
-	public getServicedCustomer(){
+	public int getServicedCustomer(){
 
 	return this.servicedCustomer;
 

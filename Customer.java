@@ -9,11 +9,11 @@ public class Customer {
         this.serviceTime = svcTime;
     }
 
-    public takeService(){
+    public void takeService(){
         serviceTime -= serviceTime;
     }
 
-    public  isComplete() {
+    public boolean isComplete() {
         return serviceTime == 0;
     }
 

@@ -11,8 +11,13 @@ public class MarketModel{
             cashier.addCustomer(c);
             counter += 1;
          }
-      System.out.println(counter);
+      
       } // end SimulationLoop  
-   }// end runSimulation        
-} // end MarketModel
+   System.out.println("Number of customers served : " + cashier.getServicedCustomer());   
+   System.out.println("Number of customers left in queue : " + cashier.queueLength());
+   System.out.println("Average time customers spend \n waiting to be served : " + 
+   runningTime / cashier.getServicedCustomer()); 
+   }// end runSimulation
+
+   }// end MarketModel
 
