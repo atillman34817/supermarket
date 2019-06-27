@@ -18,6 +18,8 @@ public class Cashier {
 	public void serviceCustomer() {
 		Customer aCustomer = customers.peek();
 		
+		if(aCustomer == null)
+			return ;
 		aCustomer.takeService();
 		
 		if(aCustomer.isComplete()){
