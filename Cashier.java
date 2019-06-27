@@ -2,7 +2,11 @@ package TimeSimulation;
 
 public class Cashier {
 	
-	LinkedQueue<Customer> customers = new LinkedQueue<>();
+	private LinkedQueue<Customer> customers;
+	
+	public Cashier() {
+		customers = new LinkedQueue<Customer>();
+	}
 	
 	public void addCustomer(Customer customer) {
 		customers.enqueue(customer);
@@ -12,13 +16,20 @@ public class Cashier {
 		customers.dequeue();
 	} //end removeCustomer
 	
-	public void serviceCostumer() {
+	public boolean serviceCustomer() {
 		
 		Customer aCustomer = customers.peek();
-		aCustomer.substractServiceUnit();
+		for(int i = 0; i <= aCustomer.getServiceRequired(); i++) {
+			try {
+				Thread.sleep(500);
+			}
+				catch(InterruptedException e){
+				
+			}
+		}
+		return true;
 		
-	}//end servceCustomer
-	
+	}//end isCustomerServiced
 	public int queueLength() {
 		
 		return customers.size();
