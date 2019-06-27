@@ -16,10 +16,8 @@ public class Cashier {
 	} //end removeCustomer
 	
 	public void serviceCustomer() {
+      if (this.customers.isEmpty()) return;
 		Customer aCustomer = customers.peek();
-		
-		if(aCustomer == null)
-			return ;
 		aCustomer.takeService();
 		
 		if(aCustomer.isComplete()){
