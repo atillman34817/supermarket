@@ -10,7 +10,7 @@ public class Customer {
     }
 
     public void takeService(){
-        serviceTime -= serviceTime;
+        this.serviceTime = this.serviceTime - 1;
     }
 
     public boolean isComplete() {

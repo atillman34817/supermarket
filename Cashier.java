@@ -15,11 +15,12 @@ public class Cashier {
 		customers.dequeue();
 	} //end removeCustomer
 	
-	public void serviceCustomer() {
+	public void serviceCustomer(){
+    if(customers.isEmpty()){
+       return;
+      }
 		Customer aCustomer = customers.peek();
 		
-		if(aCustomer == null)
-			return ;
 		aCustomer.takeService();
 		
 		if(aCustomer.isComplete()){

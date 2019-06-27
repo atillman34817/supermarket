@@ -1,4 +1,5 @@
 import java.util.Random;
+
 public class MarketModel{
    public void runSimulation(double probOfNewArrival,double runningTime, double averageTime){
       Cashier cashier = new Cashier();
@@ -11,7 +12,7 @@ public class MarketModel{
             cashier.addCustomer(c);
             counter += 1;
          }
-      
+      cashier.serviceCustomer();
       } // end SimulationLoop  
    System.out.println("Number of customers served : " + cashier.getServicedCustomer());   
    System.out.println("Number of customers left in queue : " + cashier.queueLength());
